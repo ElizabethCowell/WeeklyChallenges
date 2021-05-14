@@ -109,11 +109,15 @@ namespace ChallengesWithTestsMark8
             {
                 return 1;
             }
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
 
             int total = 1;
                 while (number != 1)
                 {
-                    total = total * number;
+                    total *= number;
                     number--;
                 }
 
